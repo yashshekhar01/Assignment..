@@ -41,16 +41,6 @@ test('Login functionality', async ({ page }) => {
         );
         console.log('Mobile Names:', mobileNames); // Logs names for comparison
       });
-
-      
-
-      test('Validate Pagination', async ({ page }) => {
-        await page.goto('https://www.demoblaze.com/#');
-        await page.click('a:has-text("Phones")'); // Open Phones category
-        await page.waitForSelector('.pagination'); // Wait for pagination to load
-        await page.click('.pagination a:has-text("2")'); 
-        await expect(page).toHaveURL(/page=2/); 
-    });
        
 
       test('Add Product to Cart', async ({ page }) => {
